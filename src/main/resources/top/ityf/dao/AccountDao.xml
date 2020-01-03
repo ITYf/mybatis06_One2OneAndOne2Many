@@ -26,6 +26,7 @@
 
 
     <!--方法二：多表查询-->
+    <!-- 定义一个accountUser实体类，把查询结果封装到该实体类 -->
     <!--查询所有账户，同时包含用户名和地址信息-->
     <select id="findAllAccount" resultType="top.ityf.domain.AccountUser">
         select a.*,u.username,u.address from account a,user u where u.id=a.uid;
